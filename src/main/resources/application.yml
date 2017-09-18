@@ -15,3 +15,7 @@ s3:
   accessKey: <access key id>
   secretKey: <secret access key>
   bucketName: <name of the bucket>
+
+logging.level:
+  root: INFO
+  org.superbiz.moviefun: DEBUG
