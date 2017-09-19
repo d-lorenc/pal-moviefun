@@ -2,5 +2,7 @@
 target
 classes
 build
+out
+.gradle
 .idea
-.env
+.envrc
