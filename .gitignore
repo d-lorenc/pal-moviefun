@@ -3,5 +3,5 @@ target
 classes
 build
 .idea
-.env
+.envrc
 .gradle
