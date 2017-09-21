@@ -2,6 +2,14 @@ apply from: "../../java.gradle"
 
 apply plugin: "org.springframework.boot"
 
+apply plugin: "io.spring.dependency-management"
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:$springCloudVersion"
+    }
+}
+
 group = "org.superbiz"
 version = "1.1.0-SNAPSHOT"
 description = "OpenEJB :: Web Examples :: MovieService"
@@ -11,6 +19,9 @@ dependencies {
 
     compile "org.springframework.boot:spring-boot-starter-web"
     compile "org.springframework.boot:spring-boot-starter-data-jpa"
+
+    compile "io.pivotal.spring.cloud:spring-cloud-sso-connector:$springCloudSsoVersion"
+    compile "io.pivotal.spring.cloud:cloudfoundry-certificate-truster:$certTrusterVersion"
 
     compile "mysql:mysql-connector-java:$mysqlVersion"
 }

@@ -1,13 +1,22 @@
 ---
 memory: 1G
 instances: 1
+env:
+  TRUST_CERTS: api.longs.pal.pivotal.io
+services:
+- movie-fun-sso
+
 applications:
 - name: album-service
   path: applications/album-service/build/libs/album-service-1.1.0-SNAPSHOT.jar
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - album-database
 - name: movie-service
   path: applications/movie-service/build/libs/movie-service-1.1.0-SNAPSHOT.jar
+  env:
+    GRANT_TYPE: client_credentials
   services:
   - movie-database
 - name: movie-fun-app

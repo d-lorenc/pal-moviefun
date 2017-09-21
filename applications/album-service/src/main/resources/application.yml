@@ -1,5 +1,9 @@
 server.port: 8081
 
+security:
+  basic:
+    enabled: false
+
 spring:
   jpa:
     properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
