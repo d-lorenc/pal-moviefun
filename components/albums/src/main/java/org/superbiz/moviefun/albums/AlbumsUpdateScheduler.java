@@ -26,7 +26,6 @@ public class AlbumsUpdateScheduler {
         this.albumsUpdater = albumsUpdater;
     }
 
-
     @Scheduled(initialDelay = 5 * SECONDS, fixedRate = 15 * SECONDS)
     public void run() {
         try {

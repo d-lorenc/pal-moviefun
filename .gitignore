@@ -3,5 +3,6 @@ target
 classes
 build
 .idea
-.env
+.envrc
 .gradle
+.DS_Store
